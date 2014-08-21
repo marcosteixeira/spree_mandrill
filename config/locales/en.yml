@@ -1,0 +1,13 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  spree:
+    mandrill_mail_methods:
+      send_testmail: Send Test Mail
+      testmail:
+        delivery_error: Test Mail delivery error
+        delivery_success: Test Mail sent successfully
+        error: ! 'Test Mail error: %{e}'
+    mandrill_mail_methods: Mandrill Mail Methods
+    mandrill_mail_methods_settings: Mandrill Mail Methods Settings

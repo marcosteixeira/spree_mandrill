@@ -1,0 +1,41 @@
+<div data-hook="admin_mandrill_mail_method_form_fields">
+  <div class="row">
+    <div class="alpha six columns" data-hook="general">
+      <fieldset class="no-border-bottom">
+        <legend align="center"><%= Spree.t(:general) %></legend>
+
+        <div class="field">
+          <%= preference_field_tag("enable_mandrill_delivery", Spree::Config[:enable_mandrill_delivery], :type => :boolean) %>
+          <%= label_tag :enable_mail_delivery, Spree.t(:enable_mandrill_mail_delivery) %>
+        </div>
+
+        <div class="field">
+          <%= label_tag :mandrill_api_key, Spree.t(:mandrill_api_key) %><br />
+          <%= text_field_tag :mandrill_api_key, Spree::Config[:mandrill_api_key], :class => 'fullwidth' %>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="six columns omega" data-hook="templates">
+      <fieldset class="no-border-bottom">
+        <legend align="center"><%= Spree.t(:templates) %></legend>
+        <div class="field">
+          <%= label_tag :order_confirm_email_template, Spree.t(:order_confirm_email_template) %><br />
+          <%= text_field_tag :order_confirm_email_template, Spree::Config[:order_confirm_email_template], :class => 'fullwidth' %>
+        </div>
+        <div class="field">
+          <%= label_tag :order_cancel_email_template, Spree.t(:order_cancel_email_template) %><br />
+          <%= text_field_tag :order_cancel_email_template, Spree::Config[:order_cancel_email_template], :class => 'fullwidth' %>
+        </div>
+        <div class="field">
+          <%= label_tag :shipped_email_template, Spree.t(:shipped_email_template) %><br />
+          <%= text_field_tag :shipped_email_template, Spree::Config[:shipped_email_template], :class => 'fullwidth' %>
+        </div>
+        <div class="field">
+          <%= label_tag :test_email_template, Spree.t(:test_email_template) %><br />
+          <%= text_field_tag :test_email_template, Spree::Config[:test_email_template], :class => 'fullwidth' %>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>
